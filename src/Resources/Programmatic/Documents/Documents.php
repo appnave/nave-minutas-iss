@@ -44,4 +44,11 @@ class Documents
             $data
         )->object();
     }
+
+    public function download($uuidDocument)
+    {
+        return $this->juridico->request->get(
+            sprintf('/programmatic/documents/%s/download', $uuidDocument),
+        )->object();
+    }
 }
