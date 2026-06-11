@@ -7,7 +7,7 @@ use Bildvitta\IssJuridico\IssJuridico;
 class ViewDocuments
 {
     private IssJuridico $juridico;
-    
+
 
     public function __construct(IssJuridico $juridico)
     {
@@ -21,12 +21,12 @@ class ViewDocuments
             $data
         )->object();
     }
-    
+
     public function show(array $data): object
     {
         return $this->juridico->request->get(
             '/programmatic/view-documents/',
             $data
         )->object();
-    } 
+    }
 }

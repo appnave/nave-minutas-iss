@@ -63,7 +63,7 @@
             "vendor/bin/pint --test"
         ],
         "fix-style": [
-            "vendor/bin/pint --parallel"
+            "vendor/bin/pint"
         ]
     }
 }

@@ -8,7 +8,7 @@ use Illuminate\Http\Client\Response;
 class SaleReceipts
 {
     private IssJuridico $juridico;
-    
+
     public function __construct(IssJuridico $juridico)
     {
         $this->juridico = $juridico;

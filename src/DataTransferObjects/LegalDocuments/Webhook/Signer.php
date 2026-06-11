@@ -14,7 +14,7 @@ class Signer
      */
     public string $email;
 
-        /**
+    /**
      * @var bool|null
      */
     public ?bool $signed;

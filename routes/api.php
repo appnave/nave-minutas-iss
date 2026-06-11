@@ -13,7 +13,6 @@ use Bildvitta\IssJuridico\Http\Controllers\Documents\ResendSignerController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\SelectController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\SendController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\VerifySignatureController;
-use Bildvitta\IssJuridico\Http\Controllers\Documents\ViewController;
 use Bildvitta\IssJuridico\Http\Controllers\Documents\WebhookController;
 use Illuminate\Support\Facades\Route;
 
