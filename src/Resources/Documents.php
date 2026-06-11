@@ -7,7 +7,7 @@ use Bildvitta\IssJuridico\IssJuridico;
 class Documents
 {
     private IssJuridico $juridico;
-    
+
 
     public function __construct(IssJuridico $juridico)
     {
@@ -46,7 +46,7 @@ class Documents
         )->object();
     }
 
-    public function historicDocument($uuidDocument,$data)
+    public function historicDocument($uuidDocument, $data)
     {
         return $this->juridico->request->get(
             sprintf('/documents/%s/historic', $uuidDocument),
@@ -54,7 +54,7 @@ class Documents
         )->object();
     }
 
-    public function fileDocument($uuidDocument,$data)
+    public function fileDocument($uuidDocument, $data)
     {
         return $this->juridico->request->get(
             sprintf('/documents/%s/file', $uuidDocument),
@@ -68,15 +68,15 @@ class Documents
             sprintf('/documents/%s/download', $uuidDocument),
         )->object();
     }
-    
+
     public function verifySignatures($uuidDocument)
     {
         return $this->juridico->request->get(
             sprintf('/documents/%s/verify-signatures', $uuidDocument),
         )->object();
     }
-    
-    public function cancel($uuidDocument,$data)
+
+    public function cancel($uuidDocument, $data)
     {
         return $this->juridico->request->put(
             sprintf('/documents/%s/cancel', $uuidDocument),
@@ -91,7 +91,7 @@ class Documents
         )->object();
     }
 
-    public function changeSigner($uuidDocument, $uuidSigner,$data)
+    public function changeSigner($uuidDocument, $uuidSigner, $data)
     {
         return $this->juridico->request->put(
             sprintf('/documents/%s/change-signer/%s', $uuidDocument, $uuidSigner),
@@ -99,7 +99,8 @@ class Documents
         )->object();
     }
 
-    public function select($data){
+    public function select($data)
+    {
         return $this->juridico->request->get(
             '/templates/select',
             $data
@@ -112,5 +113,5 @@ class Documents
             sprintf('/documents/%s/change-signer/%s/edit', $uuidDocument, $uuidSigner)
         )->object();
     }
-    
+
 }

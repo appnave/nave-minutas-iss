@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Bildvitta\IssJuridico\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;

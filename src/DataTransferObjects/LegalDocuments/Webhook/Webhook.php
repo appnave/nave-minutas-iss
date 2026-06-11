@@ -59,7 +59,7 @@ class Webhook
         $this->signers = null;
         if (isset($data['signers'])) {
             $this->signers = [];
-            foreach($data['signers'] as $signer) {
+            foreach ($data['signers'] as $signer) {
                 $this->signers[] = new Signer($signer);
             }
         }

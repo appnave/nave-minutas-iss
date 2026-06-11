@@ -10,10 +10,11 @@ class ResendSignerController extends DocumentController
     public function __invoke(ResendSignerRequest $request, $document, $signerDocument): JsonResponse
     {
         $response = app('juridico')->documents()->resendSigner($document, $signerDocument);
-        
+
         return response()->json(
-            $response, $response->status->code
+            $response,
+            $response->status->code
         );
-        
+
     }
 }

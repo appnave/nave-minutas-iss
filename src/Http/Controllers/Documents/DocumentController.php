@@ -6,6 +6,4 @@ use Bildvitta\IssJuridico\Http\Controllers\Controller;
 
 class DocumentController extends Controller
 {
-
-
 }

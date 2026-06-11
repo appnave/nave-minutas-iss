@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class SignerDocument extends Model
 {
-    use SoftDeletes, UsesJuridicoDB;
+    use SoftDeletes;
+    use UsesJuridicoDB;
 
     protected $connection = 'iss-juridico';
 

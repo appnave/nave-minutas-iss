@@ -7,7 +7,7 @@ use Bildvitta\IssJuridico\IssJuridico;
 class Historics
 {
     private IssJuridico $juridico;
-    
+
 
     public function __construct(IssJuridico $juridico)
     {
@@ -20,5 +20,5 @@ class Historics
             '/programmatic/historics/',
             $data
         )->object();
-    }      
+    }
 }
