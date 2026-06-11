@@ -10,10 +10,11 @@ class VerifySignatureController extends DocumentController
     public function __invoke(VerifySignatureRequest $request, $document): JsonResponse
     {
         $response = app('juridico')->documents()->verifySignatures($document);
-        
+
         return response()->json(
-            $response, $response->status->code
+            $response,
+            $response->status->code
         );
-        
+
     }
 }

@@ -11,7 +11,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Document extends Model
 {
-    use SoftDeletes, UsesJuridicoDB;
+    use SoftDeletes;
+    use UsesJuridicoDB;
 
     protected $connection = 'iss-juridico';
 

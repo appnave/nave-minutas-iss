@@ -20,7 +20,7 @@ class WebhookController extends DocumentController
 
         return response()->json([
             'status' => [
-                'code' => 200,
+                'code'    => 200,
                 'message' => __('Webhook received.'),
             ],
         ]);

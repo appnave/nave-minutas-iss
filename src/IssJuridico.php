@@ -20,7 +20,7 @@ class IssJuridico extends HttpClient implements IssJuridicoFactory
     public function __construct(?string $token = '')
     {
         parent::__construct();
-        if(is_null($token)){
+        if (is_null($token)) {
             $token = '';
         }
 
@@ -53,10 +53,10 @@ class IssJuridico extends HttpClient implements IssJuridicoFactory
         $clientId = Config::get('hub.programatic_access.client_id');
         $secretId = Config::get('hub.programatic_access.client_secret');
         $response = Http::asForm()->post($hubUrl, [
-            'grant_type' => 'client_credentials',
-            'client_id' => $clientId,
+            'grant_type'    => 'client_credentials',
+            'client_id'     => $clientId,
             'client_secret' => $secretId,
-            'scope' => '*',
+            'scope'         => '*',
         ]);
 
         return $response->json('access_token');
