@@ -5,6 +5,7 @@ namespace Bildvitta\IssJuridico\Resources\Programmatic;
 use Bildvitta\IssJuridico\IssJuridico;
 use Bildvitta\IssJuridico\Resources\Programmatic\Documents\Documents;
 use Bildvitta\IssJuridico\Resources\Programmatic\Historics\Historics;
+use Bildvitta\IssJuridico\Resources\Programmatic\Products\Products;
 use Bildvitta\IssJuridico\Resources\Programmatic\SaleReceipts\SaleReceipts;
 use Bildvitta\IssJuridico\Resources\Programmatic\SignerDocuments\SignerDocuments;
 use Bildvitta\IssJuridico\Resources\Programmatic\ViewDocuments\ViewDocuments;
@@ -49,5 +50,10 @@ class Programmatic
     public function saleReceipts(): SaleReceipts
     {
         return new SaleReceipts($this->juridico);
+    }
+
+    public function products(): Products
+    {
+        return new Products($this->juridico);
     }
 }
